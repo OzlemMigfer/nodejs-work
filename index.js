@@ -69,8 +69,19 @@ const path = require("node:path");
 // console.log(path.join("folder1","folder2","../folder3"));
 // console.log(path.join(__dirname,"data.json"));
 
-console.log(path.resolve("folder1","folder2","folder3"));
-console.log(path.resolve("/folder1","folder2","folder3"));
-console.log(path.resolve("folder1","//folder2","folder3"));
-console.log(path.resolve("folder1","folder2","../folder3"));
-console.log(path.resolve(__dirname,"data.json"));
+// console.log(path.resolve("folder1","folder2","folder3"));
+// console.log(path.resolve("/folder1","folder2","folder3"));
+// console.log(path.resolve("folder1","//folder2","folder3"));
+// console.log(path.resolve("folder1","folder2","../folder3"));
+// console.log(path.resolve(__dirname,"data.json"));
+
+
+//CALLBACK PATTERNS
+function greet(name){
+    console.log(`Hello ${name}`);
+}
+function greetVishwas(greetFn){
+    const name = 'Vishwas';
+    greetFn(name);
+}
+greetVishwas(greet);
